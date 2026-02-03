@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta name="description" content="Tải Tool giải captcha Big Helmets Hero of Destiny - Bản cập nhật mới nhất v1.3. Hỗ trợ đơn luồng và đa luồng tối ưu.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tải Tool giải captcha Big Helmets Hero of Destiny - Bản cập nhật mới nhất v1.4.1. Hỗ trợ đơn luồng và đa luồng tối ưu.">
     <meta name="keywords" content="Big Helmets, Captcha Solver, Tool Game, Hero of Destiny, giải captcha big helmets">
     <meta name="author" content="Thanh Cao">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bighelmets.online/">
-    <meta property="og:title" content="Tool Big Helmets Hero of Destiny - Cập nhật v1.3">
-    <meta property="og:description" content="Giải captcha tự động, gửi thông báo Telegram, hỗ trợ chạy đa luồng nhiều giả lập. Tải ngay bản mới nhất!">
+    <meta property="og:title" content="Tool Big Helmets Hero of Destiny - Cập nhật v1.4.1">
+    <meta property="og:description" content="Giải captcha tự động, gửi thông báo Telegram, hỗ trợ chạy đa luồng nhiều giả lập.">
     <meta property="og:image" content="https://raw.githubusercontent.com/thanhcao1/my-tools/main/thumb.png"> 
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Tool Big Helmets Hero of Destiny - Cập nhật v1.3">
-    <meta property="twitter:description" content="Giải captcha tự động và hỗ trợ đa luồng chuyên nghiệp.">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tool Center - Big Helmets Hero of Destiny</title>
     <style>
         :root {
@@ -38,7 +35,8 @@
             padding: 15px 0;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 9999; /* Đảm bảo menu luôn nằm trên cùng */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         nav ul {
             list-style: none;
@@ -76,17 +74,8 @@
         }
 
         h2 { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 0; }
-        h3 { color: #1e293b; margin-top: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; display: flex; align-items: center; }
+        h3 { color: #1e293b; margin-top: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
         
-        .badge-step {
-            background: var(--primary);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 4px;
-            margin-right: 10px;
-            font-size: 14px;
-        }
-
         .guide-step {
             background: #f8fafc;
             border-left: 4px solid var(--primary);
@@ -114,6 +103,7 @@
             font-size: 14px;
             display: block;
             border-left: 4px solid #38bdf8;
+            overflow-x: auto;
         }
 
         .feature-list {
@@ -143,8 +133,11 @@
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
             transition: 0.3s;
+            margin-top: 20px;
         }
         .download-shape:hover { transform: scale(1.05); }
+
+        img { max-width: 100%; height: auto; border-radius: 8px; margin: 10px 0; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
@@ -167,31 +160,17 @@
             <h2>Bản Đơn Luồng (Single-Thread)</h2>
             <p><i>Big Helmets Hero of Destiny Captcha Solver - Single Core</i></p>
             <hr>
-            <p><strong>Latest:</strong> v1.4.1 | 🕒 03/02/2026</p>
-			<div class="card">
-            <h2>Danh sách chức năng</h2>
+            <p><strong>Phiên bản mới nhất:</strong> v1.4.1 | 🕒 03/02/2026</p>
+            
+            <h3>Danh sách chức năng</h3>
             <div class="feature-list">
-                <div class="feature-item">
-                    <b>🎯 Scan Buff</b>
-                    Lọc Buff theo ý muốn. <br><small>(Lưu ý: Phải tắt "Quick Select Buff" trong cài đặt game)</small>
-                </div>
-                <div class="feature-item">
-                    <b>🚫 Ads Killer</b>
-                    Tự động tắt quảng cáo (Tối ưu nhất cho giả lập MuMu).
-                </div>
-                <div class="feature-item">
-                    <b>🤖 Auto Clicker</b>
-                    Tự động kích hoạt lại chế độ Auto nếu nút này vô tình bị tắt.
-                </div>
-                <div class="feature-item">
-                    <b>⏳ Shutdown (1h)</b>
-                    Tự động tắt máy tính nếu game không hoạt động hoặc treo trong 1 giờ.
-                </div>
-                <div class="feature-item">
-                    <b>♾️ Endless Mode</b>
-                    Chế độ tự động leo tháp/đi phụ bản vô tận.
-                </div>
+                <div class="feature-item"><b>🎯 Scan Buff</b>Lọc Buff theo ý muốn.</div>
+                <div class="feature-item"><b>🚫 Ads Killer</b>Tự động tắt quảng cáo (Tối ưu MuMu).</div>
+                <div class="feature-item"><b>🤖 Auto Clicker</b>Tự kích hoạt lại chế độ Auto game.</div>
+                <div class="feature-item"><b>⏳ Shutdown (1h)</b>Tắt máy khi treo game 1 giờ.</div>
+                <div class="feature-item"><b>♾️ Endless Mode</b>Leo tháp/phụ bản vô tận.</div>
             </div>
+            
             <a href="https://drive.google.com/file/d/19ZnmPgOFsGd7Urx6W0KHPO0tyWN3nBtX/view?usp=drive_link" class="download-shape">Tải bản Đơn Luồng</a>
         </div>
     </div>
@@ -201,111 +180,68 @@
             <h2>Bản Đa Luồng (Multi-Thread)</h2>
             <p><i>Big Helmets Hero of Destiny Captcha Solver - Multi Manager</i></p>
             <hr>
-            <p style="background: #fef3c7; padding: 10px; border-radius: 5px; color: #92400e;">
-                🔥 <strong>Nâng cấp:</strong> Chạy nhiều giả lập trên cùng 1 tool.
-            </p>
-			<div class="card">
-            <h2>Danh sách chức năng</h2>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <b>🎯 Scan Buff</b>
-                    Lọc Buff theo ý muốn. <br><small>(Lưu ý: Phải tắt "Quick Select Buff" trong cài đặt game)</small>
-                </div>
-                <div class="feature-item">
-                    <b>🚫 Ads Killer</b>
-                    Tự động tắt quảng cáo (Tối ưu nhất cho giả lập MuMu).
-                </div>
-                <div class="feature-item">
-                    <b>🤖 Auto Clicker</b>
-                    Tự động kích hoạt lại chế độ Auto nếu nút này vô tình bị tắt.
-                </div>
-                <div class="feature-item">
-                    <b>⏳ Shutdown (1h)</b>
-                    Tự động tắt máy tính nếu game không hoạt động hoặc treo trong 1 giờ.
-                </div>
-                <div class="feature-item">
-                    <b>♾️ Endless Mode</b>
-                    Chế độ tự động leo tháp/đi phụ bản vô tận.
-                </div>
+            <div class="warning-box" style="background: #e0f2fe; border-color: #bae6fd; color: #0369a1;">
+                🚀 <b>Dành cho Pro:</b> Bản này cho phép chạy 2, 5 hoặc 10+ giả lập cùng lúc trên 1 giao diện Tool duy nhất.
             </div>
+
+            <h3>Tại sao nên dùng bản Đa Luồng?</h3>
+            <ul>
+                <li>Tiết kiệm tài nguyên máy tính (chạy chung 1 lõi OCR).</li>
+                <li>Quản lý tập trung, không cần mở nhiều cửa sổ Tool.</li>
+                <li>Tự động xếp hàng giải captcha khi có nhiều acc bị cùng lúc.</li>
+            </ul>
+
             <a href="https://drive.google.com/file/d/13y9xeLs7nAkAQUHn0U34Fbv74VQQfyQ9/view?usp=drive_link" class="download-shape">Tải bản Đa Luồng</a>
         </div>
     </div>
 
     <div id="guide" class="tab-content">
         <div class="card">
-            <h2>I. Chuẩn bị hệ thống & Cài đặt Tool</h2>
-            
+            <h2>I. Chuẩn bị hệ thống</h2>
             <div class="warning-box">
-                ⚠️ <b>Lưu ý quan trọng:</b> Cần <b>tắt phần mềm diệt virus</b> (Windows Defender) trước khi giải nén và chạy tool để tránh bị xóa file hệ thống.
+                ⚠️ <b>Lưu ý:</b> Tắt Windows Defender trước khi giải nén.
             </div>
-
             <div class="guide-step">
                 <b>1. Cài đặt EasyOCR:</b><br>
-                Copy thư mục <code style="color:var(--danger)">.EasyOCR</code> vào đường dẫn sau trên máy tính của bạn:
-                <code class="code-block">C:\Users\&lt;Tên máy của bạn&gt;\.EasyOCR</code>
+                Copy thư mục <code>.EasyOCR</code> vào: <code>C:\Users\&lt;Tên máy&gt;\.EasyOCR</code>
             </div>
-
             <div class="guide-step">
-                <b>2. Cấu hình giả lập (MuMu Player):</b>
-                <ul>
-                    <li>Kích thước màn hình: <b>1280 x 720</b></li>
-                    <li>Ngôn ngữ trong game: <b>Tiếng Anh (English)</b></li>
-                    <li>Bật ADB trong cài đặt giả lập (Xem mục II bên dưới).</li>
-                </ul>
+                <b>2. Cấu hình MuMu:</b><br>
+                Màn hình: 1280x720 | Ngôn ngữ: English | Bật ADB.
             </div>
         </div>
 
         <div class="card">
-            <h2>II. Kết nối ADB & Port</h2>
-            
+            <h2>II. Cách lấy Port & Kết nối</h2>
             <div class="guide-step">
-                <b>Bước 1: Mở CMD từ thư mục giả lập</b><br>
-                Truy cập vào thư mục cài đặt giả lập của bạn. Trên thanh địa chỉ của thư mục, gõ <code style="background:#ddd; padding:2px 5px">CMD</code> và nhấn <b>Enter</b>.
-                <div style="margin-top:10px; border: 1px solid #ccc; padding: 10px; background: #eee; text-align: center; color: #666; font-size: 13px;">
-                    <img src="source/cmd.png" width="600" alt="Thư mục giả lập được cài">
-                </div>
+                <b>Bước 1:</b> Vào thư mục cài MuMu, gõ <code>CMD</code> trên thanh địa chỉ.
             </div>
-
             <div class="guide-step">
-                <b>Bước 2: Kiểm tra kết nối</b><br>
-                Trong cửa sổ CMD vừa hiện ra, gõ lệnh sau để xem danh sách port đã kết nối:
-                <code class="code-block">adb devices</code>
-				<img src="source/adb connect.png" width="600" alt="Thực thi lệnh ADB">
+                <b>Bước 2:</b> Gõ lệnh <code>adb devices</code> để lấy danh sách Port.
+                <code class="code-block">127.0.0.1:16384 device</code>
             </div>
-
             <div class="guide-step">
-                <b>Bước 3: Nhập Port vào Tool</b><br>
-                Tại giao diện Tool, tìm ô <b>Connection</b> -> Nhập số <b>Port</b> vừa thấy ở CMD -> Nhấn <b>Connect</b>.
-                <img src="source/tool 1.png" width="600" alt="Thư mục giả lập được cài">
-				<br>Kiểm tra tại tab <b>Dashboard</b>, nếu hiện thông số giả lập là đã thành công.
-				<img src="source/sucess.png" width="600" alt="Thư mục giả lập được cài">
+                <b>Bước 3:</b> Nhập số <b>16384</b> vào Tool và nhấn <b>Connect</b>.
             </div>
         </div>
 
-        <div class="card">
-            <h2>III. Danh sách chức năng</h2>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <b>🎯 Scan Buff</b>
-                    Lọc Buff theo ý muốn. <br><small>(Lưu ý: Phải tắt "Quick Select Buff" trong cài đặt game)</small>
-                </div>
-                <div class="feature-item">
-                    <b>🚫 Ads Killer</b>
-                    Tự động tắt quảng cáo (Tối ưu nhất cho giả lập MuMu).
-                </div>
-                <div class="feature-item">
-                    <b>🤖 Auto Clicker</b>
-                    Tự động kích hoạt lại chế độ Auto nếu nút này vô tình bị tắt.
-                </div>
-                <div class="feature-item">
-                    <b>⏳ Shutdown (1h)</b>
-                    Tự động tắt máy tính nếu game không hoạt động hoặc treo trong 1 giờ.
-                </div>
-                <div class="feature-item">
-                    <b>♾️ Endless Mode</b>
-                    Chế độ tự động leo tháp/đi phụ bản vô tận.
-                </div>
+        <div class="card" style="border-top: 5px solid var(--warning);">
+            <h2>III. Hướng dẫn chạy Đa Luồng</h2>
+            <p>Đối với bản Multi-Thread, thao tác sẽ khác một chút:</p>
+            <div class="guide-step">
+                <b>Bước 1:</b> Mở tất cả các giả lập bạn muốn chạy (VD: 3 tab MuMu).
+            </div>
+            <div class="guide-step">
+                <b>Bước 2:</b> Chạy lệnh <code>adb devices</code>. Bạn sẽ thấy nhiều Port hiện ra:
+                <code class="code-block">
+                    127.0.0.1:16384 device<br>
+                    127.0.0.1:16402 device<br>
+                    127.0.0.1:16415 device
+                </code>
+            </div>
+            <div class="guide-step">
+                <b>Bước 3:</b> Tại giao diện Tool Đa Luồng, nhập các Port cách nhau bởi dấu phẩy. 
+                <br>VD: <code>16384, 16402, 16415</code> rồi nhấn <b>Connect All</b>.
             </div>
         </div>
     </div>
@@ -313,12 +249,8 @@
     <div id="contact" class="tab-content">
         <div class="card">
             <h2>Thông tin Liên hệ</h2>
-            <div class="contact-item">
-                <strong>📞 Zalo:</strong> &nbsp; <a href="https://zalo.me/0972788487" target="_blank">0972 788 487</a>
-            </div>
-            <div class="contact-item">
-                <strong>🌐 Facebook:</strong> &nbsp; <a href="https://www.facebook.com/huynhthanh196/" target="_blank">huynhthanh196</a>
-            </div>
+            <p><strong>📞 Zalo:</strong> <a href="https://zalo.me/0972788487" target="_blank">0972 788 487</a></p>
+            <p><strong>🌐 Facebook:</strong> <a href="https://www.facebook.com/huynhthanh196/" target="_blank">huynhthanh196</a></p>
         </div>
     </div>
 
@@ -338,5 +270,3 @@
 
 </body>
 </html>
-
-
