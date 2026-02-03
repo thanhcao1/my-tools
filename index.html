@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Center - Big Helmets Hero of Destiny</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --bg: #f1f5f9;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        /* Menu Navigation */
+        nav {
+            background: #1e293b;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #60a5fa; }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Tab Content Logic */
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s; }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        h2 { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; }
+
+        .download-shape {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            transition: 0.3s;
+        }
+        .download-shape:hover { transform: scale(1.05); }
+
+        .contact-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#" onclick="openTab('single')">Bản Đơn Luồng</a></li>
+        <li><a href="#" onclick="openTab('multi')">Bản Đa Luồng</a></li>
+        <li><a href="#" onclick="openTab('contact')">Liên Hệ</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    
+    <div id="single" class="tab-content active">
+        <div class="card">
+            <h2>Bản Đơn Luồng (Single-Thread)</h2>
+            <p><i>Big Helmets Hero of Destiny Captcha Solver - Single Core</i></p>
+            <hr>
+            <p><strong>Lastest:</strong> v1.3 - Bighelmet-Captcha-v.1.3.zip</p>
+            <div style="display: flex; gap: 40px;">
+                <div>
+                    <strong>Chức năng:</strong>
+                    <ul>
+                        <li>Tự nhấn Play Again</li>
+                        <li>Tự giải captcha</li>
+                        <li>Thông báo Telegram</li>
+                        <li>Auto, Tắt QC, Buff...</li>
+                    </ul>
+                </div>
+                <div style="color: var(--secondary)">
+                    <strong>Features:</strong>
+                    <ul>
+                        <li>Auto-click Play Again</li>
+                        <li>Auto-solve captcha</li>
+                        <li>Telegram Alert</li>
+                        <li>Auto, Ad-block, Buff...</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="https://drive.google.com/file/d/1SGb5r7JvIxRrBZ2YoUHI72hZiT5xohsv/view?usp=drive_link" class="download-shape">Link tải tại đây / Download</a>
+        </div>
+    </div>
+
+    <div id="multi" class="tab-content">
+        <div class="card">
+            <h2>Bản Đa Luồng (Multi-Thread)</h2>
+            <p><i>Big Helmets Hero of Destiny Captcha Solver - Multi Manager</i></p>
+            <hr>
+            <p style="background: #fef3c7; padding: 10px; border-radius: 5px; color: #92400e;">
+                🔥 <strong>Nâng cấp:</strong> Chạy nhiều giả lập trên cùng 1 tool (Run multiple emulators)
+            </p>
+            <p><strong>Lastest:</strong> v1.0 Multi - Bighelmet-Multi-v.1.0.zip</p>
+            <div style="display: flex; gap: 40px;">
+                <ul>
+                    <li>Tất cả tính năng bản đơn</li>
+                    <li>Quản lý nhiều luồng</li>
+                    <li>Tối ưu CPU/RAM</li>
+                </ul>
+                <ul style="color: var(--secondary)">
+                    <li>All single features</li>
+                    <li>Multi-thread management</li>
+                    <li>CPU/RAM Optimization</li>
+                </ul>
+            </div>
+            <a href="https://drive.google.com/file/d/1wDJ04l6bDfEs6_JMSzAACxvm6pVbjlUo/view?usp=drive_link" class="download-shape">Link tải tại đây / Download</a>
+        </div>
+    </div>
+
+    <div id="contact" class="tab-content">
+        <div class="card">
+            <h2>Thông tin Liên hệ</h2>
+            <div class="contact-item">
+                <strong>📞 Zalo:</strong> &nbsp; <a href="https://zalo.me/0972788487" target="_blank">0972 788 487</a>
+            </div>
+            <div class="contact-item">
+                <strong>🌐 Facebook:</strong> &nbsp; <a href="https://www.facebook.com/huynhthanh196/" target="_blank">huynhthanh196</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function openTab(tabName) {
+        var i, tabcontent;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
