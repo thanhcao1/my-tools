@@ -2,18 +2,18 @@
 <html lang="vi">
 <head>
     <meta name="description" content="Tải Tool giải captcha Big Helmets Hero of Destiny - Bản cập nhật mới nhất v1.3. Hỗ trợ đơn luồng và đa luồng tối ưu.">
-<meta name="keywords" content="Big Helmets, Captcha Solver, Tool Game, Hero of Destiny, giải captcha big helmets">
-<meta name="author" content="Thanh Cao">
+    <meta name="keywords" content="Big Helmets, Captcha Solver, Tool Game, Hero of Destiny, giải captcha big helmets">
+    <meta name="author" content="Thanh Cao">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://bighelmets.online/">
-<meta property="og:title" content="Tool Big Helmets Hero of Destiny - Cập nhật v1.3">
-<meta property="og:description" content="Giải captcha tự động, gửi thông báo Telegram, hỗ trợ chạy đa luồng nhiều giả lập. Tải ngay bản mới nhất!">
-<meta property="og:image" content="https://raw.githubusercontent.com/thanhcao1/my-tools/main/thumb.png"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bighelmets.online/">
+    <meta property="og:title" content="Tool Big Helmets Hero of Destiny - Cập nhật v1.3">
+    <meta property="og:description" content="Giải captcha tự động, gửi thông báo Telegram, hỗ trợ chạy đa luồng nhiều giả lập. Tải ngay bản mới nhất!">
+    <meta property="og:image" content="https://raw.githubusercontent.com/thanhcao1/my-tools/main/thumb.png"> 
 
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Tool Big Helmets Hero of Destiny - Cập nhật v1.3">
-<meta property="twitter:description" content="Giải captcha tự động và hỗ trợ đa luồng chuyên nghiệp.">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Tool Big Helmets Hero of Destiny - Cập nhật v1.3">
+    <meta property="twitter:description" content="Giải captcha tự động và hỗ trợ đa luồng chuyên nghiệp.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tool Center - Big Helmets Hero of Destiny</title>
@@ -22,14 +22,17 @@
             --primary: #2563eb;
             --secondary: #64748b;
             --bg: #f1f5f9;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
         }
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
             background: var(--bg);
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
-        /* Menu Navigation */
         nav {
             background: #1e293b;
             padding: 15px 0;
@@ -41,15 +44,17 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             margin: 0;
             padding: 0;
+            flex-wrap: wrap;
         }
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
+            padding: 5px 10px;
         }
         nav a:hover { color: #60a5fa; }
 
@@ -59,7 +64,6 @@
             padding: 20px;
         }
 
-        /* Tab Content Logic */
         .tab-content { display: none; }
         .tab-content.active { display: block; animation: fadeIn 0.5s; }
 
@@ -68,33 +72,79 @@
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
         }
 
-        h2 { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; }
+        h2 { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 0; }
+        h3 { color: #1e293b; margin-top: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; display: flex; align-items: center; }
+        
+        .badge-step {
+            background: var(--primary);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .guide-step {
+            background: #f8fafc;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            color: #92400e;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: 'Consolas', monospace;
+            margin: 10px 0;
+            font-size: 14px;
+            display: block;
+            border-left: 4px solid #38bdf8;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .feature-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .feature-item:hover { border-color: var(--primary); transform: translateY(-2px); }
+        .feature-item b { color: var(--primary); display: block; margin-bottom: 5px; }
 
         .download-shape {
             display: inline-flex;
             align-items: center;
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
+            color: white !important;
             padding: 15px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 20px;
             box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
             transition: 0.3s;
         }
         .download-shape:hover { transform: scale(1.05); }
-
-        .contact-item {
-            margin: 15px 0;
-            padding: 15px;
-            background: #f8fafc;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-        }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
@@ -105,6 +155,7 @@
     <ul>
         <li><a href="#" onclick="openTab('single')">Bản Đơn Luồng</a></li>
         <li><a href="#" onclick="openTab('multi')">Bản Đa Luồng</a></li>
+        <li><a href="#" onclick="openTab('guide')">Hướng Dẫn Sử Dụng</a></li>
         <li><a href="#" onclick="openTab('contact')">Liên Hệ</a></li>
     </ul>
 </nav>
@@ -116,31 +167,8 @@
             <h2>Bản Đơn Luồng (Single-Thread)</h2>
             <p><i>Big Helmets Hero of Destiny Captcha Solver - Single Core</i></p>
             <hr>
-            <p><strong>Latest:</strong> v1.4 </p>
-            <div style="display: inline-block; background: #e2e8f0; padding: 4px 12px; border-radius: 6px; font-size: 13px; color: #475569; margin-bottom: 10px;">
-    🕒 <b>Latest version:</b> 03/02/2026
-</div>
-            <div style="display: flex; gap: 40px;">
-                <div>
-                    <strong>Chức năng:</strong>
-                    <ul>
-                        <li>Tự nhấn Play Again</li>
-                        <li>Tự giải captcha</li>
-                        <li>Thông báo Telegram</li>
-                        <li>Auto, Tắt QC, Buff...</li>
-                    </ul>
-                </div>
-                <div style="color: var(--secondary)">
-                    <strong>Features:</strong>
-                    <ul>
-                        <li>Auto-click Play Again</li>
-                        <li>Auto-solve captcha</li>
-                        <li>Telegram Alert</li>
-                        <li>Auto, Ad-block, Buff...</li>
-                    </ul>
-                </div>
-            </div>
-            <a href="https://drive.google.com/file/d/1pMbHITI7bQjfFXfoWMHTIYJh5Qbt-YKx/view?usp=sharing" class="download-shape">Link tải tại đây / Download</a>
+            <p><strong>Latest:</strong> v1.4 | 🕒 03/02/2026</p>
+            <a href="https://drive.google.com/file/d/1pMbHITI7bQjfFXfoWMHTIYJh5Qbt-YKx/view?usp=drive_link" class="download-shape">Tải bản Đơn Luồng</a>
         </div>
     </div>
 
@@ -150,25 +178,87 @@
             <p><i>Big Helmets Hero of Destiny Captcha Solver - Multi Manager</i></p>
             <hr>
             <p style="background: #fef3c7; padding: 10px; border-radius: 5px; color: #92400e;">
-                🔥 <strong>Nâng cấp:</strong> Chạy nhiều giả lập trên cùng 1 tool (Run multiple emulators)
+                🔥 <strong>Nâng cấp:</strong> Chạy nhiều giả lập trên cùng 1 tool.
             </p>
-            <p><strong>Latest:</strong> v1.0 Multi - Bighelmet-Multi-v.1.0.zip</p>
-            <div style="display: inline-block; background: #e2e8f0; padding: 4px 12px; border-radius: 6px; font-size: 13px; color: #475569; margin-bottom: 10px;">
-    🕒 <b>Latest v1.0 </b> 03/02/2026
-</div>
-            <div style="display: flex; gap: 40px;">
+            <a href="https://drive.google.com/file/d/13y9xeLs7nAkAQUHn0U34Fbv74VQQfyQ9/view?usp=drive_link" class="download-shape">Tải bản Đa Luồng</a>
+        </div>
+    </div>
+
+    <div id="guide" class="tab-content">
+        <div class="card">
+            <h2>I. Chuẩn bị hệ thống & Cài đặt Tool</h2>
+            
+            <div class="warning-box">
+                ⚠️ <b>Lưu ý quan trọng:</b> Cần <b>tắt phần mềm diệt virus</b> (Windows Defender) trước khi giải nén và chạy tool để tránh bị xóa file hệ thống.
+            </div>
+
+            <div class="guide-step">
+                <b>1. Cài đặt EasyOCR:</b><br>
+                Copy thư mục <code style="color:var(--danger)">.EasyOCR</code> vào đường dẫn sau trên máy tính của bạn:
+                <code class="code-block">C:\Users\&lt;Tên máy của bạn&gt;\.EasyOCR</code>
+            </div>
+
+            <div class="guide-step">
+                <b>2. Cấu hình giả lập (MuMu Player):</b>
                 <ul>
-                    <li>Tất cả tính năng bản đơn</li>
-                    <li>Quản lý nhiều luồng</li>
-                    <li>Tối ưu CPU/RAM</li>
-                </ul>
-                <ul style="color: var(--secondary)">
-                    <li>All single features</li>
-                    <li>Multi-thread management</li>
-                    <li>CPU/RAM Optimization</li>
+                    <li>Kích thước màn hình: <b>1280 x 720</b></li>
+                    <li>Ngôn ngữ trong game: <b>Tiếng Anh (English)</b></li>
+                    <li>Bật ADB trong cài đặt giả lập (Xem mục II bên dưới).</li>
                 </ul>
             </div>
-            <a href="https://drive.google.com/file/d/13y9xeLs7nAkAQUHn0U34Fbv74VQQfyQ9/view?usp=sharing" class="download-shape">Link tải tại đây / Download</a>
+        </div>
+
+        <div class="card">
+            <h2>II. Kết nối ADB & Port</h2>
+            
+            <div class="guide-step">
+                <b>Bước 1: Mở CMD từ thư mục giả lập</b><br>
+                Truy cập vào thư mục cài đặt giả lập của bạn. Trên thanh địa chỉ của thư mục, gõ <code style="background:#ddd; padding:2px 5px">CMD</code> và nhấn <b>Enter</b>.
+                <div style="margin-top:10px; border: 1px solid #ccc; padding: 10px; background: #eee; text-align: center; color: #666; font-size: 13px;">
+                    <img src="source/cmd.png" width="600" alt="Thư mục giả lập được cài">
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <b>Bước 2: Kiểm tra kết nối</b><br>
+                Trong cửa sổ CMD vừa hiện ra, gõ lệnh sau để xem danh sách port đã kết nối:
+                <code class="code-block">adb devices</code>
+				<img src="source/adb connect.png" width="600" alt="Thực thi lệnh ADB">
+            </div>
+
+            <div class="guide-step">
+                <b>Bước 3: Nhập Port vào Tool</b><br>
+                Tại giao diện Tool, tìm ô <b>Connection</b> -> Nhập số <b>Port</b> vừa thấy ở CMD -> Nhấn <b>Connect</b>.
+                <img src="source/tool 1.png" width="600" alt="Thư mục giả lập được cài">
+				<br>Kiểm tra tại tab <b>Dashboard</b>, nếu hiện thông số giả lập là đã thành công.
+				<img src="source/sucess.png" width="600" alt="Thư mục giả lập được cài">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>III. Danh sách chức năng</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <b>🎯 Scan Buff</b>
+                    Lọc Buff theo ý muốn. <br><small>(Lưu ý: Phải tắt "Quick Select Buff" trong cài đặt game)</small>
+                </div>
+                <div class="feature-item">
+                    <b>🚫 Ads Killer</b>
+                    Tự động tắt quảng cáo (Tối ưu nhất cho giả lập MuMu).
+                </div>
+                <div class="feature-item">
+                    <b>🤖 Auto Clicker</b>
+                    Tự động kích hoạt lại chế độ Auto nếu nút này vô tình bị tắt.
+                </div>
+                <div class="feature-item">
+                    <b>⏳ Shutdown (1h)</b>
+                    Tự động tắt máy tính nếu game không hoạt động hoặc treo trong 1 giờ.
+                </div>
+                <div class="feature-item">
+                    <b>♾️ Endless Mode</b>
+                    Chế độ tự động leo tháp/đi phụ bản vô tận.
+                </div>
+            </div>
         </div>
     </div>
 
@@ -194,18 +284,9 @@
             tabcontent[i].classList.remove("active");
         }
         document.getElementById(tabName).classList.add("active");
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
 </script>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
