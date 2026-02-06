@@ -227,12 +227,13 @@
         // Xóa cánh hoa sau khi rơi xong để tránh nặng máy
         setTimeout(() => {
             petal.remove();
-        }, (fallDuration + delay) * 1000);
+        }, (fallDuration + delay) * 800);
     }
 
     // Tạo mật độ cánh hoa
-    setInterval(createPetal, 100); // Mỗi 0.3s tạo 1 cánh
+    setInterval(createPetal, 500); // Mỗi 0.3s tạo 1 cánh
 </script>
 
 </body>
 </html>
+
