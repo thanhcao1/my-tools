@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Download Big Helmets Hero of Destiny Captcha Solver - Latest update v1.3. Optimized for single-thread and multi-thread support.">
-    <meta name="keywords" content="Big Helmets, Captcha Solver, Game Tool, Hero of Destiny, solve big helmets captcha">
-    <meta name="author" content="Thanh Cao">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bighelmets.online/">
-    <meta property="og:title" content="Big Helmets Hero of Destiny Tool - Update v1.3">
-    <meta property="og:description" content="Auto captcha solver, Telegram notifications, multi-instance emulator support. Download the latest version now!">
-    <meta property="og:image" content="https://raw.githubusercontent.com/thanhcao1/my-tools/main/thumb.png"> 
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Big Helmets Hero of Destiny Tool - Update v1.3">
-    <meta property="twitter:description" content="Professional auto captcha solver and multi-thread support.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tool Center - Big Helmets Hero of Destiny</title>
@@ -76,46 +63,7 @@
         }
 
         h2 { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 0; }
-        h3 { color: #1e293b; margin-top: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; display: flex; align-items: center; }
         
-        .badge-step {
-            background: var(--primary);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 4px;
-            margin-right: 10px;
-            font-size: 14px;
-        }
-
-        .guide-step {
-            background: #f8fafc;
-            border-left: 4px solid var(--primary);
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .warning-box {
-            background: #fffbeb;
-            border: 1px solid #fef3c7;
-            color: #92400e;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-
-        .code-block {
-            background: #1e293b;
-            color: #38bdf8;
-            padding: 12px;
-            border-radius: 6px;
-            font-family: 'Consolas', monospace;
-            margin: 10px 0;
-            font-size: 14px;
-            display: block;
-            border-left: 4px solid #38bdf8;
-        }
-
         .feature-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -155,7 +103,6 @@
     <ul>
         <li><a href="#" onclick="openTab('single')">Single-Thread</a></li>
         <li><a href="#" onclick="openTab('multi')">Multi-Thread</a></li>
-        <li><a href="#" onclick="openTab('guide')">User Guide</a></li>
         <li><a href="#" onclick="openTab('contact')">Contact</a></li>
     </ul>
 </nav>
@@ -230,85 +177,6 @@
         </div>
     </div>
 
-    <div id="guide" class="tab-content">
-        <div class="card">
-            <h2>I. System Preparation & Installation</h2>
-            
-            <div class="warning-box">
-                ⚠️ <b>Important Note:</b> You must <b>disable antivirus software</b> (Windows Defender) before extracting and running the tool to prevent system files from being deleted.
-            </div>
-
-            <div class="guide-step">
-                <b>1. Install EasyOCR:</b><br>
-                Copy the <code style="color:var(--danger)">.EasyOCR</code> folder to the following path on your computer:
-                <code class="code-block">C:\Users\&lt;Your_PC_Name&gt;\.EasyOCR</code>
-            </div>
-
-            <div class="guide-step">
-                <b>2. Emulator Configuration (MuMu Player):</b>
-                <ul>
-                    <li>Screen Resolution: <b>1280 x 720</b></li>
-                    <li>In-game Language: <b>English</b></li>
-                    <li>Enable ADB in emulator settings (See Section II below).</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>II. ADB Connection & Port</h2>
-            
-            <div class="guide-step">
-                <b>Step 1: Open CMD from Emulator Folder</b><br>
-                Go to your emulator's installation folder. In the folder's address bar, type <code style="background:#ddd; padding:2px 5px">CMD</code> and press <b>Enter</b>.
-                <div style="margin-top:10px; border: 1px solid #ccc; padding: 10px; background: #eee; text-align: center; color: #666; font-size: 13px;">
-                    <img src="source/cmd.png" width="600">
-                </div>
-            </div>
-
-            <div class="guide-step">
-                <b>Step 2: Check Connection</b><br>
-                In the CMD window, type the following command to see the list of connected ports:
-                <code class="code-block">adb devices</code>
-				<img src="source/adb connect.png" width="600">
-            </div>
-
-            <div class="guide-step">
-                <b>Step 3: Enter Port into the Tool</b><br>
-                In the Tool interface, find the <b>Connection</b> field -> Enter the <b>Port</b> number displayed in CMD -> Click <b>Connect</b>.
-				<img src="source/tool 1.png" width="400">
-                <br>Check the <b>Dashboard</b> tab; if the emulator specs appear, the connection is successful.
-				<img src="source/sucess.png" width="600">
-				
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>III. Features List</h2>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <b>🎯 Scan Buff</b>
-                    Filter Buffs as desired. <br><small>(Note: Must disable "Quick Select Buff" in game settings)</small>
-                </div>
-                <div class="feature-item">
-                    <b>🚫 Ads Killer</b>
-                    Auto-close advertisements (Optimized for MuMu Player).
-                </div>
-                <div class="feature-item">
-                    <b>🤖 Auto Clicker</b>
-                    Automatically reactivates Auto mode if it is accidentally toggled off.
-                </div>
-                <div class="feature-item">
-                    <b>⏳ Shutdown (1h)</b>
-                    Auto shutdown PC if the game is inactive or frozen for 1 hour.
-                </div>
-                <div class="feature-item">
-                    <b>♾️ Endless Mode</b>
-                    Automated infinite tower climbing/dungeon mode.
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div id="contact" class="tab-content">
         <div class="card">
             <h2>Contact Information</h2>
@@ -337,8 +205,3 @@
 
 </body>
 </html>
-
-
-
-
-
