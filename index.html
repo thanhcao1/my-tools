@@ -13,13 +13,40 @@
             --danger: #ef4444;
             --success: #10b981;
         }
+
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
             background: var(--bg);
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            overflow-x: hidden; /* Tránh hiện thanh cuộn ngang do cánh hoa */
         }
+
+        /* --- CSS Hiệu ứng Cánh hoa --- */
+        .petal {
+            position: fixed;
+            top: -10%;
+            user-select: none;
+            pointer-events: none;
+            z-index: 9999;
+            background: linear-gradient(to bottom right, #ffd7da, #ffb7c5);
+            border-radius: 150% 0 150% 150%; /* Hình dáng cánh hoa */
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            animation: fall linear infinite, sway ease-in-out infinite;
+        }
+
+        @keyframes fall {
+            0% { top: -10%; }
+            100% { top: 110%; }
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: translateX(0) rotate(0deg); }
+            50% { transform: translateX(100px) rotate(180deg); }
+        }
+
+        /* --- Layout chính --- */
         nav {
             background: #1e293b;
             padding: 15px 0;
@@ -49,17 +76,20 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 20px;
+            position: relative;
+            z-index: 10;
         }
 
         .tab-content { display: none; }
         .tab-content.active { display: block; animation: fadeIn 0.5s; }
 
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.9); /* Hơi trong suốt để thấy hoa rơi phía sau */
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
             margin-bottom: 25px;
+            backdrop-filter: blur(5px);
         }
 
         h2 { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 0; }
@@ -108,38 +138,22 @@
 </nav>
 
 <div class="container">
-    
     <div id="single" class="tab-content active">
         <div class="card">
             <h2>Single-Thread Version</h2>
             <p><i>Big Helmets Hero of Destiny Captcha Solver - Single Core</i></p>
             <hr>
             <p><strong>Latest:</strong> v1.5 | 🕒 05/03/2026</p>
-			<div class="card">
-            <h2>Features List</h2>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <b>🎯 Scan Buff</b>
-                    Filter Buffs as desired. <br><small>(Note: Must disable "Quick perk select" in game settings)</small>
-                </div>
-                <div class="feature-item">
-                    <b>🚫 Time-out</b>
-                    Exit game when x min
-                </div>
-                <div class="feature-item">
-                    <b>🤖 Auto Clicker</b>
-                    Automatically reactivates Auto mode if it is accidentally toggled off.
-                </div>
-                <div class="feature-item">
-                    <b>⏳ Shutdown (1h)</b>
-                    Auto shutdown PC if the game is inactive or frozen for 1 hour.
-                </div>
-                <div class="feature-item">
-                    <b>♾️ Endless Mode</b>
-                    Automated play Endless/dungeon.
+            <div class="card">
+                <h2>Features List</h2>
+                <div class="feature-list">
+                    <div class="feature-item"><b>🎯 Scan Buff</b> Filter Buffs as desired.</div>
+                    <div class="feature-item"><b>🚫 Time-out</b> Exit game when x min.</div>
+                    <div class="feature-item"><b>🤖 Auto Clicker</b> Smart re-activation.</div>
+                    <div class="feature-item"><b>⏳ Shutdown (1h)</b> Safety PC shutdown.</div>
+                    <div class="feature-item"><b>♾️ Endless Mode</b> Automated Dungeon.</div>
                 </div>
             </div>
-        </div>
             <a href="https://drive.google.com/file/d/15y507II-QOlQ3N39gHEpYcD3xfTgy_zh/view?usp=sharing" class="download-shape">Download Single-Thread</a>
         </div>
     </div>
@@ -150,52 +164,32 @@
             <p><i>Big Helmets Hero of Destiny Captcha Solver - Multi Manager</i></p>
             <hr>
             <p style="background: #fef3c7; padding: 10px; border-radius: 5px; color: #92400e;">
-                🔥 <strong>Upgrade:</strong> Run multiple emulators simultaneously on a single tool.
+                🔥 <strong>Upgrade:</strong> Run multiple emulators simultaneously.
             </p>
-			<div class="card">
-            <h2>Features List</h2>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <b>🎯 Scan Buff</b>
-                    Filter Buffs as desired. <br><small>(Note: Must disable "Quick Select Buff" in game settings)</small>
-                </div>
-                <div class="feature-item">
-                    <b>🚫 Ads Killer</b>
-                    Auto-close advertisements (Optimized for MuMu Player).
-                </div>
-                <div class="feature-item">
-                    <b>🤖 Auto Clicker</b>
-                    Automatically reactivates Auto mode if it is accidentally toggled off.
-                </div>
-                <div class="feature-item">
-                    <b>⏳ Shutdown (1h)</b>
-                    Auto shutdown PC if the game is inactive or frozen for 1 hour.
-                </div>
-				<div class="feature-item">
-                    <b>♾️ Endless Mode</b>
-                    Automated play Endless/dungeon.
+            <div class="card">
+                <h2>Features List</h2>
+                <div class="feature-list">
+                    <div class="feature-item"><b>🎯 Scan Buff</b> Advanced filtering.</div>
+                    <div class="feature-item"><b>🚫 Ads Killer</b> Auto-close MuMu ads.</div>
+                    <div class="feature-item"><b>🤖 Auto Clicker</b> Smart monitoring.</div>
+                    <div class="feature-item"><b>⏳ Shutdown (1h)</b> Inactivity protection.</div>
                 </div>
             </div>
-        </div>
-            <a href="###" class="download-shape">Inbox me</a>
+            <a href="#" class="download-shape">Inbox me</a>
         </div>
     </div>
 
     <div id="contact" class="tab-content">
         <div class="card">
             <h2>Contact Information</h2>
-            <div class="contact-item">
-                <strong>📞 Telegram:</strong> &nbsp; <a href="https://t.me/doraemonboom" target="_blank">Doraemon</a>
-            </div>
-            <div class="contact-item">
-                <strong>🌐 Facebook:</strong> &nbsp; <a href="https://www.facebook.com/huynhthanh196/" target="_blank">huynhthanh196</a>
-            </div>
+            <p><strong>📞 Telegram:</strong> <a href="https://t.me/doraemonboom" target="_blank">Doraemon</a></p>
+            <p><strong>🌐 Facebook:</strong> <a href="https://www.facebook.com/huynhthanh196/" target="_blank">huynhthanh196</a></p>
         </div>
     </div>
-
 </div>
 
 <script>
+    // Hàm chuyển Tab
     function openTab(tabName) {
         var i, tabcontent;
         tabcontent = document.getElementsByClassName("tab-content");
@@ -205,8 +199,40 @@
         document.getElementById(tabName).classList.add("active");
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
+
+    // --- Script tạo Cánh hoa rơi ---
+    function createPetal() {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        
+        // Ngẫu nhiên kích thước
+        const size = Math.random() * 15 + 10; 
+        petal.style.width = size + 'px';
+        petal.style.height = size + 'px';
+        
+        // Ngẫu nhiên vị trí bắt đầu
+        petal.style.left = Math.random() * 100 + 'vw';
+        
+        // Ngẫu nhiên thời gian rơi và độ trễ
+        const fallDuration = Math.random() * 5 + 5; 
+        const swayDuration = Math.random() * 2 + 2;
+        const delay = Math.random() * 5;
+        
+        petal.style.animationName = 'fall, sway';
+        petal.style.animationDuration = `${fallDuration}s, ${swayDuration}s`;
+        petal.style.animationDelay = `${delay}s`;
+        
+        document.body.appendChild(petal);
+
+        // Xóa cánh hoa sau khi rơi xong để tránh nặng máy
+        setTimeout(() => {
+            petal.remove();
+        }, (fallDuration + delay) * 1000);
+    }
+
+    // Tạo mật độ cánh hoa
+    setInterval(createPetal, 100); // Mỗi 0.3s tạo 1 cánh
 </script>
 
 </body>
 </html>
-
