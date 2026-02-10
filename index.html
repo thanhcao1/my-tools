@@ -20,7 +20,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            overflow-x: hidden; /* Tránh hiện thanh cuộn ngang do cánh hoa */
+            overflow-x: hidden;
         }
 
         /* --- CSS Hiệu ứng Cánh hoa --- */
@@ -31,7 +31,7 @@
             pointer-events: none;
             z-index: 9999;
             background: linear-gradient(to bottom right, #ffd7da, #ffb7c5);
-            border-radius: 150% 0 150% 150%; /* Hình dáng cánh hoa */
+            border-radius: 150% 0 150% 150%;
             box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
             animation: fall linear infinite, sway ease-in-out infinite;
         }
@@ -84,7 +84,7 @@
         .tab-content.active { display: block; animation: fadeIn 0.5s; }
 
         .card {
-            background: rgba(255, 255, 255, 0.9); /* Hơi trong suốt để thấy hoa rơi phía sau */
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
@@ -109,6 +109,31 @@
         }
         .feature-item:hover { border-color: var(--primary); transform: translateY(-2px); }
         .feature-item b { color: var(--primary); display: block; margin-bottom: 5px; }
+
+        /* Video Responsive Container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .download-area {
+            text-align: center;
+            margin-top: 25px;
+        }
 
         .download-shape {
             display: inline-flex;
@@ -144,6 +169,12 @@
             <p><i>Big Helmets Hero of Destiny Captcha Solver - Single Core</i></p>
             <hr>
             <p><strong>Latest:</strong> v1.5.5 | 🕒 09/02/2026</p>
+            
+            <h3>Video Demo & Hướng dẫn</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/n2o62LvrXx0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
             <div class="card">
                 <h2>Features List</h2>
                 <div class="feature-list">
@@ -154,7 +185,9 @@
                     <div class="feature-item"><b>♾️ Endless Mode</b> Automated Dungeon.</div>
                 </div>
             </div>
-            <a href="https://drive.google.com/file/d/169ThXl36x6MajImxzwJPsiajwuKdRzfv/view?usp=sharing" class="download-shape">Download Single-Thread</a>
+            <div class="download-area">
+                <a href="https://drive.google.com/file/d/169ThXl36x6MajImxzwJPsiajwuKdRzfv/view?usp=sharing" class="download-shape">Download Single-Thread</a>
+            </div>
         </div>
     </div>
 
@@ -164,10 +197,17 @@
             <p><i>Big Helmets Hero of Destiny Captcha Solver - Multi Manager</i></p>
             <hr>
             <p><strong>Latest:</strong> v1.1 | 🕒 09/02/2026</p>
+            
+            <h3>Video Demo & Multi-Manager</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/n2o62LvrXx0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
             <p style="background: #fef3c7; padding: 10px; border-radius: 5px; color: #92400e;">
                 🔥 <strong>Upgrade:</strong> Run multiple emulators simultaneously - Optimize Ram.
             </p>
-            <div class="feature-item"><b>Price: 10$/month</div>
+            <div class="feature-item" style="margin-bottom: 15px;"><b>Price: 10$/month</b></div>
+            
             <div class="card">
                 <h2>Features List</h2>
                 <div class="feature-list">
@@ -178,8 +218,9 @@
                     <div class="feature-item"><b>♾️ Endless Mode</b> Automated Dungeon.</div>
                 </div>
             </div>
-            
-            <a href="https://drive.google.com/file/d/1ezE3QjwcX6H7qLrE1y8z8zkzjZWFQhFB/view?usp=sharing" class="download-shape">Download Here</a>
+            <div class="download-area">
+                <a href="https://drive.google.com/file/d/1ezE3QjwcX6H7qLrE1y8z8zkzjZWFQhFB/view?usp=sharing" class="download-shape">Download Here</a>
+            </div>
         </div>
     </div>
 
@@ -193,7 +234,6 @@
 </div>
 
 <script>
-    // Hàm chuyển Tab
     function openTab(tabName) {
         var i, tabcontent;
         tabcontent = document.getElementsByClassName("tab-content");
@@ -204,51 +244,24 @@
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
-    // --- Script tạo Cánh hoa rơi ---
     function createPetal() {
         const petal = document.createElement('div');
         petal.classList.add('petal');
-        
-        // Ngẫu nhiên kích thước
         const size = Math.random() * 15 + 10; 
         petal.style.width = size + 'px';
         petal.style.height = size + 'px';
-        
-        // Ngẫu nhiên vị trí bắt đầu
         petal.style.left = Math.random() * 100 + 'vw';
-        
-        // Ngẫu nhiên thời gian rơi và độ trễ
         const fallDuration = Math.random() * 5 + 5; 
         const swayDuration = Math.random() * 2 + 2;
         const delay = Math.random() * 5;
-        
         petal.style.animationName = 'fall, sway';
         petal.style.animationDuration = `${fallDuration}s, ${swayDuration}s`;
         petal.style.animationDelay = `${delay}s`;
-        
         document.body.appendChild(petal);
-
-        // Xóa cánh hoa sau khi rơi xong để tránh nặng máy
-        setTimeout(() => {
-            petal.remove();
-        }, (fallDuration + delay) * 800);
+        setTimeout(() => { petal.remove(); }, (fallDuration + delay) * 1000);
     }
-
-    // Tạo mật độ cánh hoa
-    setInterval(createPetal, 500); // Mỗi 0.3s tạo 1 cánh
+    setInterval(createPetal, 500);
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
